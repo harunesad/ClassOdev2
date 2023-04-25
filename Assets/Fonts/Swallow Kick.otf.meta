@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: df5cd70cc89ef488cbadff00da1dad9b
+guid: a51f259d668c5408d9011d4a3f778355
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -10,7 +10,8 @@ TrueTypeFontImporter:
   includeFontData: 1
   fontNames:
   - Swallow Kick
-  fallbackFontReferences: []
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: df5cd70cc89ef488cbadff00da1dad9b, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
