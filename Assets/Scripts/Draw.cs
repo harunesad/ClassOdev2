@@ -33,7 +33,6 @@ public class Draw : MonoBehaviour
             {
                 if (hit.transform != null)
                 {
-                    line.materials[0].color = Random.ColorHSV(0, 1, 0, 1, 0, 1, 0, 1);
                     line.SetVertexCount(line.positionCount + 1);
                     line.SetPosition(line.positionCount - 1, hit.point + Vector3.up);
                 }
