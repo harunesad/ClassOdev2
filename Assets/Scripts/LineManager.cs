@@ -33,6 +33,7 @@ public class LineManager : MonoBehaviour
                     }
                     Debug.Log("if dışı");
                     var line = Instantiate(linePrefab);
+                    line.GetComponent<LineRenderer>().materials[0].color = Random.ColorHSV(0, 1, 0, 1, 0, 1, 0, 1);
                     line.transform.position = hit.point;
                     line.GetComponent<LineRenderer>().SetVertexCount(1);
                     line.GetComponent<LineRenderer>().SetPosition(0, hit.point);

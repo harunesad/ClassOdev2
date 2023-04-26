@@ -15,16 +15,16 @@ public class Draw : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetMouseButton(0) && LineManager.lineManager.restart)
-        {
-            var lineRend = Instantiate(gameObject);
-            lineRend.GetComponent<LineRenderer>().SetVertexCount(1);
-            lineRend.transform.position = Input.mousePosition;
-            lineRend.AddComponent<Draw>();
-            LineManager.lineManager.restart = false;
-            Destroy(GetComponent<Draw>());
-            return;
-        }
+        //if (Input.GetMouseButton(0) && LineManager.lineManager.restart)
+        //{
+        //    var lineRend = Instantiate(gameObject);
+        //    lineRend.GetComponent<LineRenderer>().SetVertexCount(1);
+        //    lineRend.transform.position = Input.mousePosition;
+        //    lineRend.AddComponent<Draw>();
+        //    LineManager.lineManager.restart = false;
+        //    Destroy(GetComponent<Draw>());
+        //    return;
+        //}
         if (Input.GetMouseButton(0))
         {
             RaycastHit hit;
@@ -33,14 +33,15 @@ public class Draw : MonoBehaviour
             {
                 if (hit.transform != null)
                 {
+                    line.materials[0].color = Random.ColorHSV(0, 1, 0, 1, 0, 1, 0, 1);
                     line.SetVertexCount(line.positionCount + 1);
                     line.SetPosition(line.positionCount - 1, hit.point + Vector3.up);
                 }
             }
         }
-        if (Input.GetMouseButtonUp(0))
-        {
-            LineManager.lineManager.restart = true;
-        }
+        //if (Input.GetMouseButtonUp(0))
+        //{
+        //    LineManager.lineManager.restart = true;
+        //}
     }
 }

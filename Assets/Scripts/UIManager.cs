@@ -5,25 +5,20 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField] Image rocket;
+    [SerializeField] Image healthBarAlt, healthBarUst;
     private void Awake()
     {
         
     }
     void Start()
     {
-    StartCoroutine(DestroyImage());
+
     }
     void Update()
     {
-        
-    }
-    IEnumerator DestroyImage()
-    {
-        for (int i = 0; i < 5; i++)
+        if (Input.GetMouseButtonDown(0))
         {
-            yield return new WaitForSeconds(1.3f);
-            rocket.fillAmount -= .25f;
+            healthBarUst.fillAmount -= .25f;
         }
     }
 }
