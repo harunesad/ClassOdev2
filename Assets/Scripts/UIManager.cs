@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField] Image healthBarAlt, healthBarUst;
     private void Awake()
     {
         
@@ -16,9 +15,10 @@ public class UIManager : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            healthBarUst.fillAmount -= .25f;
-        }
+
+    }
+    public void Click()
+    {
+        Debug.Log("Kırmızı");
     }
 }
