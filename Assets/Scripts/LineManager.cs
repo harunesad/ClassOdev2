@@ -7,6 +7,7 @@ public class LineManager : MonoBehaviour
     public static LineManager lineManager;
     public bool restart = true;
     public GameObject linePrefab;
+    public FlexibleColorPicker colorPicker;
     private void Awake()
     {
         lineManager = this;
@@ -28,7 +29,7 @@ public class LineManager : MonoBehaviour
                     }
 
                     var line = Instantiate(linePrefab);
-                    line.GetComponent<LineRenderer>().materials[0].color = Random.ColorHSV(0, 1, 0, 1, 0, 1, 0, 1);
+                    line.GetComponent<LineRenderer>().materials[0].color = colorPicker.color;
                     line.transform.position = hit.point;
                     line.GetComponent<LineRenderer>().SetPosition(0, hit.point);
                     line.AddComponent<Draw>();
